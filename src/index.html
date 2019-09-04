@@ -10,6 +10,67 @@
 
   </head>
   <body>
+    <h1>TVMaze shows</h1>
+    <p id="my-p" class="texto" data-cy="selector-cypress" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid temporibus 
+      alias praesentium optio eum dignissimos blanditiis ut, autem, accusantium obcaecati labore eos cumque s
+      equi voluptates <button>Enviar</button> et doloremque <span>Link</span> ipsum?</p>
+
+     <p id="my-p" class="texto" data-cy="selector-cypress" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid temporibus 
+      alias praesentium optio eum dignissimos blanditiis ut, autem, accusantium obcaecati labore eos cumque s
+      equi voluptates <button>Enviar</button> et doloremque <span>Link</span> ipsum?</p>
+
+     <p id="my-p" class="texto" data-cy="selector-cypress" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aliquid temporibus 
+      alias praesentium optio eum dignissimos blanditiis ut, autem, accusantium obcaecati labore eos cumque s
+      equi voluptates <button>Enviar</button> et doloremque <span>Link</span> ipsum?</p>  
+
+    <button id="my-input"> Texto</button>
+
+    <input type="text" id="input">
+
+  </body>
+
+    <script>
+      console.log("Hello world")
+
+      //getElementById --> NO DESCOMENTAR
+      // const myElement = document.getElementById('my-p');
+      // console.log(myElement.innerHTML);
+      // console.log(myElement);
+      // console.log(myElement.textContent);
+      // myElement.innerHTML = '<button>Enviar</button>'
+      
+      //querySelector --> NO DESCOMENTAR
+      // const myElement = document.querySelector('[data-cy=selector-cypress]');
+      // console.log(myElement.dataset);
+      // myElement.innerHTML = '<button>Enviar</button>'
+      
+      //getElementsByClassName --> NO DESCOMENTAR
+      const myElement = document.getElementsByClassName('texto');
+      console.log(myElement)
+      Object.keys(myElement).forEach(key => {
+        myElement[key].innerHTML = '<button>Send<button>'
+        
+      });
+
+    const myButton = document.getElementById('my-button'); 
+    const myInput = document.querySelector('#input');
+    
+    myInput.addEventListener('click', () => console.log('Execute'));
+    
+    myInput.addEventListener('focus', () => console.log('Focus'));
+
+    myInput.addEventListener('blur', () => console.log('Blur'));
+
+    myInput.addEventListener('keydown', evt => {
+      console.log('change')
+      console.log(evt.target.value);
+      
+    });
+
+    myInput.addEventListener('copy', () => console.log('copy'));
+    
+
+    </script>
 
   </body>
 </html>
